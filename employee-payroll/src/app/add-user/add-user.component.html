@@ -1,0 +1,67 @@
+<h2 mat-dialog-title>Add Employee</h2>
+<mat-dialog-content>
+  <form>
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Name</mat-label>
+      <input matInput placeholder="Enter name">
+    </mat-form-field>
+
+    <div class="profile-images">
+      <label>Profile Image</label>
+      <div>
+        <img src="assets/user1.jpg" class="profile-photo" alt="User 1">
+        <img src="assets/user2.jpg" class="profile-photo" alt="User 2">
+        <img src="assets/user3.jpg" class="profile-photo" alt="User 3">
+        <img src="assets/user4.jpg" class="profile-photo" alt="User 4">
+        <img src="assets/user5.jpg" class="profile-photo" alt="User 5">
+      </div>
+    </div>
+
+    <div class="form-group">
+      <label>Gender</label>
+      <mat-radio-group>
+        <mat-radio-button value="male">Male</mat-radio-button>
+        <mat-radio-button value="female">Female</mat-radio-button>
+      </mat-radio-group>
+    </div>
+
+    <div class="form-group">
+      <label>Department</label>
+      <div>
+        <mat-checkbox>HR</mat-checkbox>
+        <mat-checkbox>Sales</mat-checkbox>
+        <mat-checkbox>Finance</mat-checkbox>
+        <mat-checkbox>Engineer</mat-checkbox>
+        <mat-checkbox>Others</mat-checkbox>
+      </div>
+    </div>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Salary</mat-label>
+      <mat-select>
+        <mat-option value="10000">₹ 10,000</mat-option>
+        <mat-option value="20000">₹ 20,000</mat-option>
+        <mat-option value="30000">₹ 30,000</mat-option>
+        <mat-option value="40000">₹ 40,000</mat-option>
+        <mat-option value="50000">₹ 50,000</mat-option>
+      </mat-select>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Start Date</mat-label>
+      <input matInput [matDatepicker]="picker" placeholder="Choose a date">
+      <mat-datepicker-toggle matSuffix [for]="picker"></mat-datepicker-toggle>
+      <mat-datepicker #picker></mat-datepicker>
+    </mat-form-field>
+
+    <mat-form-field appearance="fill" class="full-width">
+      <mat-label>Notes</mat-label>
+      <textarea matInput></textarea>
+    </mat-form-field>
+  </form>
+</mat-dialog-content>
+<mat-dialog-actions>
+  <button mat-button mat-dialog-close>Cancel</button>
+  <button mat-button type="submit">Submit</button>
+  <button mat-button type="reset">Reset</button>
+</mat-dialog-actions>

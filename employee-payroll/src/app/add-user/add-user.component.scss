@@ -1,0 +1,39 @@
+.profile-images {
+    display: flex;
+    gap: 15px; /* Increase the gap between profile photos */
+    margin-bottom: 20px;
+  
+    .profile-photo {
+      width: 50px; /* Increase the size of profile photos */
+      height: 50px; /* Increase the size of profile photos */
+      border-radius: 50%;
+      cursor: pointer;
+      border: 2px solid transparent;
+      transition: border-color 0.3s;
+  
+      &:hover {
+        border-color: #00796b;
+      }
+    }
+  }
+  
+  .form-group {
+    margin-bottom: 20px;
+  }
+  
+  mat-dialog-content {
+    display: flex;
+    flex-direction: column;
+    gap: 25px; /* Increase the gap between form elements */
+  }
+  
+  .full-width {
+    width: 100%;
+  }
+  
+  mat-dialog-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 10px;
+  }
+  
